@@ -1,10 +1,8 @@
-# Local Weathe
+# Local Weather
 
 ## Content
 
-MEAN stack RESTful API with Material Design
-
-Application for searching, creating, editing, deleting your own recipes.
+Check your local weather
 
 ## Technologies
 

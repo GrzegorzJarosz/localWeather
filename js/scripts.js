@@ -36,7 +36,7 @@ var getCoordinates=function(){
 };
 /*------------------------------------------------------------------------*/
 var getData=function(){
-	serviceUrl=`http://api.wunderground.com/api/899e303598994b68/conditions/lang:PL/q/${coords.lat},${coords.lon}.json`;
+	serviceUrl=`https://api.wunderground.com/api/899e303598994b68/conditions/lang:PL/q/${coords.lat},${coords.lon}.json`;
 
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
@@ -51,7 +51,7 @@ var getData=function(){
 
 /*------------------------------------------------------------------------*/
 var displayer = function(data){
-	
+
 	var src=document.querySelectorAll('.kreciol');
 	src.forEach(function(a){a.classList.remove("kreciol");})
 

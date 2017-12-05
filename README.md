@@ -12,5 +12,5 @@ Application for searching, creating, editing, deleting your own recipes.
 * SASS
 * Gulp
 
-## Technologies
-[live] (https://grzegorzjarosz.github.io/localWeather/)
+## Live
+https://grzegorzjarosz.github.io/localWeather/

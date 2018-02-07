@@ -22,6 +22,9 @@
   position: relative;
   text-align: center; }
 
+.shadowed {
+  text-shadow: 0 0 12px #000; }
+
 .cond-temp {
   min-height: 78px;
   padding-top: 15px; }
@@ -30,7 +33,6 @@
   .cond-temp .val-temp {
     color: #15AADC;
     font-size: 5em;
-    text-shadow: 0 0 12px #000;
     display: inline-block; }
   .cond-temp .deg-temp {
     font-size: 1.4em;
@@ -40,8 +42,7 @@
 
 .cond-descr {
   font-size: 2em;
-  padding-top: 25px;
-  text-shadow: 0 0 12px #000; }
+  padding-top: 25px; }
   .cond-descr::first-letter {
     text-transform: uppercase; }
 
@@ -50,8 +51,7 @@
   font-size: 1.4em; }
 
 .cond-name {
-  font-size: 1.5em;
-  text-shadow: 0 0 12px #000; }
+  font-size: 1.5em; }
 
 .val {
   color: #008FBF;
@@ -63,12 +63,10 @@
   margin-left: 3px;
   display: inline-block;
   font-size: 1.6em;
-  color: #9a9a9a;
-  text-shadow: 0 0 12px #000; }
+  color: #9a9a9a; }
 
 .info-box {
-  text-align: center;
-  text-shadow: 0 0 12px #000; }
+  text-align: center; }
 
 .city {
   margin-top: 10px;

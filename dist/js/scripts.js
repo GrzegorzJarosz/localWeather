@@ -63,7 +63,7 @@ var displayer = function(data){
 	document.querySelector('.val-temp').innerHTML = data.current_observation.temp_c;
 	document.querySelector('.val-humidity').innerHTML = data.current_observation.relative_humidity;
 	document.querySelector('.val-press').innerHTML = data.current_observation.pressure_mb;
-	document.querySelector('.val-wind').innerHTML = data.current_observation.wind_mph * toMpsFactor;
+	document.querySelector('.val-wind').innerHTML = Math.round(data.current_observation.wind_mph * toMpsFactor);
 
 	var city = data.current_observation.observation_location.city.split(',',1);
 	var country = data.current_observation.observation_location.country

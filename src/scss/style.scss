@@ -2,40 +2,48 @@
 @import 'weather';
 
 * {
-    box-sizing: border-box;
-	 margin:0;
-	 padding:0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-body{
-	height:100vh;
+
+body {
+	height: 100vh;
 	background-color: $bcgr-main;
-	background-image:url('../img/01.jpeg');
+	background-image: url('../img/01.jpeg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: $color-main;
-	padding:15px;
-	font-family:'Open Sans', sans-serif;
+	padding: 15px;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 10px;
 }
+
 /*--------------------------------------------------------*/
-.kreciol{
-	&::after{
-		content:'';
-		display:block;
-		width:35px;
-		height:35px;
-		margin:auto;
+.kreciol {
+	&::after {
+		content: '';
+		display: block;
+		width: 35px;
+		height: 35px;
+		margin: auto;
 		border-radius: 50%;
-		border-top:4px solid #aaa;
-		border-bottom:4px solid #aaa;
-		border-left:4px solid transparent;
-		border-right:4px solid transparent;
-		animation:1s yy ease infinite;
+		border-top: 4px solid #aaa;
+		border-bottom: 4px solid #aaa;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		animation: 1s yy ease infinite;
 	}
 
 }
+
 @keyframes yy {
-	from{transform:rotate(0deg);}
-	to{transform:rotate(360deg);}
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }

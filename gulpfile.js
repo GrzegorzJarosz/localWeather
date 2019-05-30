@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
-
+const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
@@ -15,9 +17,20 @@ gulp.task('sass', function () {
       }));
 });
 
+//--------------> JS
+
 gulp.task('js', function () {
    gulp.src('./src/js/**/*.js')
-      .pipe(concat('scripts.js'))
+      .pipe(sourcemaps.init())
+      .pipe(babel({
+         presets: ['@babel/env']
+      }))
+      .pipe(uglify({
+         compress: {
+            unused: false
+         }
+      }))
+      .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('./dist/js'))
       .pipe(browserSync.reload({
          stream: true
@@ -32,8 +45,13 @@ gulp.task('html', function () {
       }));
 });
 
+gulp.task('imgs', function () {
+   gulp.src('src/img/*.*')
+      .pipe(gulp.dest('./dist/img'))
+});
+
 gulp.task('build', function () {
-   gulp.start(['sass', 'js', 'html'])
+   gulp.start(['sass', 'js', 'html', 'imgs'])
 });
 
 gulp.task('browserSync', function () {

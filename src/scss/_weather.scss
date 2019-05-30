@@ -24,7 +24,7 @@
 .cond-box {
 	width: 33%;
 	float: left;
-	padding: 15px;
+	padding: 10px;
 	position: relative;
 	text-align: center;
 }
@@ -71,6 +71,13 @@
 
 .cond-name {
 	font-size: 1.5em;
+}
+
+.cond-img {
+	img {
+		height: auto;
+		width: 40%;
+	}
 }
 
 .val {

@@ -51,13 +51,14 @@ let getData = function () {
 
 	const urlBase = 'https://api.weatherbit.io/v2.0/current';
 
-	serviceUrl = `urlBase`;
+	serviceUrl = `${urlBase}?lat=${coords.lat}&lon=${coords.lon}&key=0a139ed8e06e4e6189c6a12846622f67`;
 
 
 	let xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			let data = JSON.parse(this.responseText);
+
 			displayer(data);
 		}
 	};
@@ -68,23 +69,22 @@ let getData = function () {
 /*------------------------------------------------------------------------*/
 let displayer = function (data) {
 
+	const d = data.data[0];
 	let src = document.querySelectorAll('.kreciol');
 	src.forEach(function (a) {
 		a.classList.remove("kreciol");
 	})
 
-	//mph to mps convert
-	let toMpsFactor = 0.44704;
 
-	document.querySelector('.cond-img img').src = data.current_observation.icon_url;
-	document.querySelector('.cond-descr').innerHTML = data.current_observation.weather;
-	document.querySelector('.val-temp').innerHTML = data.current_observation.temp_c;
-	document.querySelector('.val-humidity').innerHTML = data.current_observation.relative_humidity;
-	document.querySelector('.val-press').innerHTML = data.current_observation.pressure_mb;
-	document.querySelector('.val-wind').innerHTML = Math.round(data.current_observation.wind_mph * toMpsFactor);
+	document.querySelector('.cond-img img').src = `img/icons/${d.weather.icon}.png`;
+	document.querySelector('.cond-descr').innerHTML = d.weather.description;
+	document.querySelector('.val-temp').innerHTML = d.temp;
+	document.querySelector('.val-humidity').innerHTML = d.rh;
+	document.querySelector('.val-press').innerHTML = Math.round(d.pres);
+	document.querySelector('.val-wind').innerHTML = Math.round(d.wind_spd);
 
-	let city = data.current_observation.observation_location.city.split(',', 1);
-	let country = data.current_observation.observation_location.country
+	let city = d.city_name;
+	let country = d.country_code;
 	let location = city + ', ' + country;
 	document.querySelector('.city').innerHTML = location;
 };

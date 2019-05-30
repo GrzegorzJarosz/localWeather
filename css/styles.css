@@ -80,16 +80,6 @@
   font-size: 1.4em;
   padding-bottom: 5px; }
 
-.logoSrc {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  border: 1px solid #333; }
-  .logoSrc p {
-    color: #9a9a9a;
-    font-size: 0.7em;
-    text-align: center; }
-
 * {
   box-sizing: border-box;
   margin: 0;

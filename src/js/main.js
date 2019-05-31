@@ -5,7 +5,7 @@
 	};
 	let serviceUrl;
 	/*------------------------------------------------------------------------*/
-	let calendar = function (timeClassContainer, dateClassContainer) {
+	function calendar(timeClassContainer, dateClassContainer) {
 
 		let setDate = function () {
 			let now = new Date();
@@ -39,7 +39,7 @@
 	};
 
 	/*------------------------------------------------------------------------*/
-	let getCoordinates = function () {
+	function getCoordinates() {
 		navigator.geolocation.getCurrentPosition(function (pos) {
 			let crd = pos.coords;
 			coords.lat = crd.latitude;
@@ -48,7 +48,7 @@
 		});
 	};
 	/*------------------------------------------------------------------------*/
-	let getData = function () {
+	function getData() {
 
 		const urlBase = 'https://api.weatherbit.io/v2.0/current';
 
@@ -68,7 +68,7 @@
 	};
 
 	/*------------------------------------------------------------------------*/
-	let displayer = function (data) {
+	function displayer(data) {
 
 		const d = data.data[0];
 		const src = document.querySelectorAll('.kreciol');

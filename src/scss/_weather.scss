@@ -8,19 +8,128 @@
 
 .weather {
 	&-container {
+		padding: 5px 10px;
 		border-radius: 20px;
 		background-color: $w_color_bcgr;
 	}
 
 	&-section {
-		padding: 10px;
+		display: flex;
+		justify-content: center;
 
 		&:not(:first-child) {
 			border-top: 2px solid rgba(255, 255, 255, 0.2);
 		}
+
+		.equal-1 {
+			flex: 1;
+		}
 	}
+}
+
+.space-btw {
+	justify-content: space-between;
+}
+
+.cond {
+	&-box {
+		display: flex;
+		justify-content: center;
+		min-width: 180px;
+	}
+
+	&-box-col {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&-temp {
+		display: flex;
+		align-self: center;
+
+		.fa {
+			font-size: 1.8em;
+		}
+	}
+
+	&-img {}
+
+	&-descr {
+		font-size: 2em;
+		align-self: center;
+
+		&::first-letter {
+			text-transform: uppercase;
+		}
+	}
+
+	&-name {
+		font-size: 1.5em;
+	}
+
+	&-ico {
+		color: $sub-gray;
+		font-size: 1.4em;
+	}
+
+	&-val {
+		display: flex;
+		align-self: center;
+	}
+
+}
+
+.val {
+	color: $color-1;
+	font-size: 3.5em;
+	text-shadow: 0 0 6px $text-lightshadow;
+
+	&-temp {
+		color: $color-3;
+		font-size: 5em;
+	}
+}
+
+.deg {
+	font-size: 1.6em;
+	color: $sub-gray;
+	margin-left: 4px;
+
+	&-temp {
+		font-size: 1.4em;
+	}
+}
+
+.info-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.city {
+	margin-top: 10px;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.time {
+	font-size: 3em;
+	color: $sub-gray;
+}
+
+.date {
+	font-size: 1.4em;
+	padding-bottom: 5px;
+}
+
+.item-down {
+	align-self: flex-end;
 }
 
 .shadowed {
 	text-shadow: 0 0 12px $text-shadow;
+}
+
+.tall {
+	padding: 10px 0px;
 }

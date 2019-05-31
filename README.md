@@ -1,10 +1,14 @@
 # Local Weather
 
+version 2.0
+
 ## Content
 
 Check your local weather
 
 ## Technologies
+
+Pure JS
 
 * AJAX
 * SASS
@@ -12,3 +16,7 @@ Check your local weather
 
 ## Live
 https://grzegorzjarosz.github.io/localWeather/
+
+## todos
+rwd
+

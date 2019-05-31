@@ -1,9 +1,10 @@
 (function () {
-	let coords = {
+
+	const coords = {
 		lat: '',
 		lon: ''
 	};
-	let serviceUrl;
+
 	/*------------------------------------------------------------------------*/
 	function calendar(timeClassContainer, dateClassContainer) {
 
@@ -52,8 +53,7 @@
 
 		const urlBase = 'https://api.weatherbit.io/v2.0/current';
 
-		serviceUrl = `${urlBase}?lat=${coords.lat}&lon=${coords.lon}&key=0a139ed8e06e4e6189c6a12846622f67`;
-
+		let serviceUrl = `${urlBase}?lat=${coords.lat}&lon=${coords.lon}&key=0a139ed8e06e4e6189c6a12846622f67`;
 
 		let xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function () {
@@ -76,7 +76,6 @@
 			a.classList.remove("kreciol");
 		})
 
-
 		document.querySelector('.cond-img img').src = `img/icons/${d.weather.icon}.png`;
 		document.querySelector('.cond-descr').innerHTML = d.weather.description;
 		document.querySelector('.val-temp').innerHTML = d.temp;
@@ -89,6 +88,7 @@
 		let location = city + ', ' + country;
 		document.querySelector('.city').innerHTML = location;
 	};
+
 	calendar('time', 'date');
 	getCoordinates();
 })()

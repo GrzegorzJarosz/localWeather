@@ -13,7 +13,8 @@
 
 .weather-section {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: 10px; }
   .weather-section:not(:first-child) {
     border-top: 2px solid rgba(255, 255, 255, 0.2); }
   .weather-section .equal-1 {

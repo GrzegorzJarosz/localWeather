@@ -89,6 +89,6 @@
 		let location = city + ', ' + country;
 		document.querySelector('.city').innerHTML = location;
 	};
-	// calendar('time', 'date');
-	// getCoordinates();
+	calendar('time', 'date');
+	getCoordinates();
 })()

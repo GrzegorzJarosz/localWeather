@@ -83,10 +83,7 @@
 		document.querySelector('.val-press').innerHTML = Math.round(d.pres);
 		document.querySelector('.val-wind').innerHTML = Math.round(d.wind_spd);
 
-		let city = d.city_name;
-		let country = d.country_code;
-		let location = city + ', ' + country;
-		document.querySelector('.city').innerHTML = location;
+		document.querySelector('.city').innerHTML = `${d.city_name}, ${d.country_code}`
 	};
 
 	calendar('time', 'date');
